@@ -2,8 +2,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     event.preventDefault();  // Impede o envio do formulário para fazer a validação
 
     // Defina o nome de usuário e senha corretos
-    const correctUsername = "123";
-    const correctPassword = "123";
+    const correctUsername = "10073006";
+    const correctPassword = "0906";
 
     // Obtém os valores inseridos pelo usuário
     const username = document.getElementById('username').value;
