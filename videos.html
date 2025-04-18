@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nosso Amor ❤️ - Vídeos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe6e6);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      color: #d6336c;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .video-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .video-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 220px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .video-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(255, 192, 203, 0.1), transparent 70%);
+      z-index: 0;
+    }
+
+    .video-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    video {
+      height: 100%;
+      width: auto;
+      border-radius: 16px;
+      z-index: 1;
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+    }
+
+    @media screen and (max-width: 600px) {
+      .video-card {
+        width: 90%;
+        height: auto;
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .mute-btn {
+  background-color: #ff80ab;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px 0;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mute-btn:hover {
+  background-color: #ff4d88;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>💖 Nossos Momentos 💖</h1>
+  </header>
+  <button id="muteButton" class="mute-btn">🔇 Mute</button>
+
+  <div class="video-gallery">
+    <div class="video-card">
+      <video controls>
+        <source src="videos/1.MP4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/2.MP4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/3.MP4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/4.MP4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/5.mov" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/6.MP4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/7.mov" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/8.mov" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/9.MOV" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/10.MP4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/11.mov" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/12.MP4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/13.MP4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/14.MP4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/15.MP4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/16.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+  
+  
+
+
+  <footer>
+    <p> Eu te amo até a última batida do meu coração 💘 </p>
+  </footer>
+
+    <!-- Botão de voltar -->
+    <div style="margin-top: 40px;">
+      <button class="btn-voltar" onclick="window.location.href='secreta.html';">
+        ⬅ Voltar
+      </button>
+    </div>
+  
+   
+    
+  
+    <script>
+      const music = document.getElementById("bgMusic");
+      music.volume = 0.1;
+    </script>
+  
+    <style>
+      .btn-voltar {
+        background-color: #d6336c;
+        color: white;
+        padding: 14px 28px;
+        font-size: 16px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+  
+      .btn-voltar:hover {
+        background-color: #c2185b;
+        transform: translateY(-2px);
+      }
+  
+      .btn-voltar:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+
+
+
+<audio id="bgMusic" autoplay loop>
+  <source src="música/musica 2.mp3" type="audio/mpeg">
+</audio>
+
+<script src="videos.js"></script>
+  
+
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> 💝</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .button {
+      padding: 20px 50px;
+      font-size: 28px;
+      color: white;
+      background: linear-gradient(to right, #ff6a88, #ff99ac);
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+      z-index: 2;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.6);
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 24px;
+      animation: float 10s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(var(--x), var(--y)) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="button" onclick="irParaLogin()"> 💝 Clique aqui </button>
+
+  <script>
+    function irParaLogin() {
+      window.location.href = "index.html";
+    }
+
+    // Emojis para espalhar
+    const emojis = ["💖", "💘", "✨", "💝", "💕", "💗", "💞", "❤️", "✨"];
+    
+    // Criar emojis animados aleatórios
+    function createEmoji() {
+      const emoji = document.createElement("span");
+      emoji.classList.add("emoji");
+      emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.style.top = Math.random() * 100 + "vh";
+      emoji.style.fontSize = (Math.random() * 20 + 20) + "px";
+
+      // movimento aleatório
+      const x = (Math.random() - 0.5) * 200 + "px";
+      const y = (Math.random() - 0.5) * 200 + "px";
+      emoji.style.setProperty('--x', x);
+      emoji.style.setProperty('--y', y);
+
+      document.body.appendChild(emoji);
+
+      setTimeout(() => {
+        emoji.remove();
+      }, 10000);
+    }
+
+    // Criar vários emojis continuamente
+    setInterval(createEmoji, 200);
+  </script>
+
+</body>
+</html>
